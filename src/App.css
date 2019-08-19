@@ -46,3 +46,51 @@
   background-color: gold;
   color: darkblue;
 }
+
+.treasure-hunt-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: -webkit-fill-available;
+  justify-content: center;
+}
+
+.treasure-hunt-title {
+  color: #484848;
+  font-family: fantasy;
+  font-size: 32px;
+  word-spacing: 6px;
+}
+
+.treasure-hunt-description {
+  color: #484848;
+  font-family: fantasy;
+  font-size: 24px;
+  margin-top: 8px;
+  word-spacing: 6px;
+}
+
+.input-code {
+  caret-color: lightgray;
+  color: #484848;
+  border: none;
+  font-family: fantasy;
+  font-size: 16px;
+  margin-top: 16px;
+  outline: none;
+  text-align: center;
+  width: 96px;
+  word-spacing: 6px;
+}
+
+.input-code:focus {
+  color: #282c34;
+  border: 1px groove lightgray;
+  border-radius: 16px;
+  letter-spacing: 8px;
+  padding-left: 8px;
+}
+
+.input-code-error:focus {
+  border: 1px solid orangered;
+}
