@@ -8,7 +8,8 @@ export default class App extends Component {
     pageNumber: 1,
     focused: false,
     codeError: false,
-    treasureHunted: false
+    treasureHunted: false,
+    congratulations: false,
   };
 
   beginClick = () => {
@@ -33,6 +34,13 @@ export default class App extends Component {
     }
   };
 
+  handleNext() {
+    this.setState({ pageNumber: this.state.pageNumber + 1, congratulations: true });
+    setTimeout(() => {
+      this.setState({ congratulations: false });
+    }, 1900);
+  }
+
   handleCode = (e) => {
     const value = e.target.value;
     const { codeError } = this.state;
@@ -53,7 +61,8 @@ export default class App extends Component {
             this.setState({ pageNumber: 1, started: false });
           }
         } else {
-          this.setState({ pageNumber: pageNumber + 1 });
+          e.target.blur();
+          this.handleNext();
         }
       } else {
         this.setState({ codeError: true });
@@ -92,7 +101,6 @@ export default class App extends Component {
               onFocus={this.focused}
               onBlur={this.blurred}
               onChange={this.handleCode}
-              onKeyUp={this.handleKeyUp}
             />
           }
         </div>
@@ -113,11 +121,24 @@ export default class App extends Component {
     );
   }
 
+  renderCongrats() {
+    return (
+      <div className="poster-container">
+        <div className="poster-shine">
+          <div className="upper-gradient" />
+          <div className="lower-gradient" />
+        </div>
+        <div className="poster-title">Congratulations !!!</div>
+      </div>
+    );
+  }
+
   render () {
-    const { started, treasureHunted } = this.state;
+    const { started, treasureHunted, congratulations } = this.state;
 
     return (
       <Fragment>
+        {congratulations && this.renderCongrats()}
         {!started && !treasureHunted && this.renderHome()}
         {started && !treasureHunted && this.renderTreasureHunt()}
         {treasureHunted && this.renderFinalScreen()}

@@ -96,3 +96,46 @@
 .input-code-error:focus {
   border: 1px solid orangered;
 }
+
+.poster-container {
+  align-items: center;
+  bottom: 0;
+  background-color: #15f4ee;
+  color: brown;
+  display: flex;
+  font-size: 32px;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.poster-shine {
+  position: fixed;
+  height: 56px;
+  transform: rotate(20deg);
+  width: 200%;
+}
+
+.poster-shine {
+  top: 120%;
+  animation: slide 2s linear;
+}
+
+.upper-gradient {
+  height: 50%;
+  width: 100%;
+  background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0.5));
+}
+
+.lower-gradient {
+  height: 50%;
+  width: 100%;
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0));
+}
+
+@keyframes slide {
+  0%{ top: 120%; }
+  100%{ top: -20%; }
+}
