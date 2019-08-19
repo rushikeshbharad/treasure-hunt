@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.2cce8147.chunk.css",
-    "main.js": "/static/js/main.b7e35778.chunk.js",
-    "main.js.map": "/static/js/main.b7e35778.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.38b44e10.js",
-    "runtime~main.js.map": "/static/js/runtime~main.38b44e10.js.map",
-    "static/js/2.5e414841.chunk.js": "/static/js/2.5e414841.chunk.js",
-    "static/js/2.5e414841.chunk.js.map": "/static/js/2.5e414841.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.5526b974a925a7d31e81b2f20f2ea3f7.js": "/precache-manifest.5526b974a925a7d31e81b2f20f2ea3f7.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.2cce8147.chunk.css.map": "/static/css/main.2cce8147.chunk.css.map",
-    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
+    "main.css": "/treasure-hunt/static/css/main.2cce8147.chunk.css",
+    "main.js": "/treasure-hunt/static/js/main.a7a337e6.chunk.js",
+    "main.js.map": "/treasure-hunt/static/js/main.a7a337e6.chunk.js.map",
+    "runtime~main.js": "/treasure-hunt/static/js/runtime~main.72b09ef1.js",
+    "runtime~main.js.map": "/treasure-hunt/static/js/runtime~main.72b09ef1.js.map",
+    "static/js/2.5e414841.chunk.js": "/treasure-hunt/static/js/2.5e414841.chunk.js",
+    "static/js/2.5e414841.chunk.js.map": "/treasure-hunt/static/js/2.5e414841.chunk.js.map",
+    "index.html": "/treasure-hunt/index.html",
+    "precache-manifest.2d4e84828a712719f8be239f6e44b9d8.js": "/treasure-hunt/precache-manifest.2d4e84828a712719f8be239f6e44b9d8.js",
+    "service-worker.js": "/treasure-hunt/service-worker.js",
+    "static/css/main.2cce8147.chunk.css.map": "/treasure-hunt/static/css/main.2cce8147.chunk.css.map",
+    "static/media/logo.svg": "/treasure-hunt/static/media/logo.5d5d9eef.svg"
   }
 }
