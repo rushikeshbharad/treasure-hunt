@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0c4ef369f011ccbe3088d91751bd6025",
+    "revision": "8bf109323273a53c53fdbe201be079d8",
     "url": "/treasure-hunt/index.html"
   },
   {
