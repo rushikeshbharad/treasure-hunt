@@ -1,5 +1,6 @@
 {
   "name": "treasure-hunt",
+  "homepage": "http://rushikeshbharad.github.io/treasure-hunt",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
