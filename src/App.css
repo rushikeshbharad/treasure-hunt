@@ -11,14 +11,38 @@
 }
 
 .home-title {
+  color: brown;
   font-family: cursive;
   font-size: 36px;
 }
 
 .home-description {
+  color: #484848;
   font-family: fantasy;
   font-size: 18px;
   line-height: 36px;
   margin-top: 24px;
   word-spacing: 6px;
+}
+
+.home-button {
+  align-items: center;
+  background-color: bisque;
+  border-radius: 8px;
+  color: brown;
+  cursor: pointer;
+  display: flex;
+  font-family: monospace;
+  font-size: 18px;
+  justify-content: center;
+  height: 48px;
+  margin-bottom: 64px;
+  margin-left: auto;
+  margin-top: 24px;
+  width: 136px;
+}
+
+.home-button:hover {
+  background-color: gold;
+  color: darkblue;
 }
