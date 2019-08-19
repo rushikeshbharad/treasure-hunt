@@ -7,7 +7,8 @@ export default class App extends Component {
     started: false,
     pageNumber: 1,
     focused: false,
-    codeError: false
+    codeError: false,
+    treasureHunted: false
   };
 
   beginClick = () => {
@@ -45,11 +46,20 @@ export default class App extends Component {
       const { code } = config.pages[pageNumber - 1];
 
       if (value === code) {
-        this.setState({ pageNumber: pageNumber + 1 });
-        e.target.value = '';
+        if (config.pages.length === pageNumber) {
+          if (config.finalTitle || config.finalDescription) {
+            this.setState({ treasureHunted: true });
+          } else {
+            this.setState({ pageNumber: 1, started: false });
+          }
+        } else {
+          this.setState({ pageNumber: pageNumber + 1 });
+        }
       } else {
         this.setState({ codeError: true });
       }
+
+      e.target.value = '';
     }
   };
 
@@ -82,6 +92,7 @@ export default class App extends Component {
               onFocus={this.focused}
               onBlur={this.blurred}
               onChange={this.handleCode}
+              onKeyUp={this.handleKeyUp}
             />
           }
         </div>
@@ -91,13 +102,25 @@ export default class App extends Component {
     return null;
   }
 
+  renderFinalScreen() {
+    return (
+      <div className="app-container">
+        <div className="home">
+          <div className="home-title">{config.finalTitle}</div>
+          <div className="home-description">{config.finalDescription}</div>
+        </div>
+      </div>
+    );
+  }
+
   render () {
-    const { started } = this.state;
+    const { started, treasureHunted } = this.state;
 
     return (
       <Fragment>
-        {!started && this.renderHome()}
-        {started && this.renderTreasureHunt()}
+        {!started && !treasureHunted && this.renderHome()}
+        {started && !treasureHunted && this.renderTreasureHunt()}
+        {treasureHunted && this.renderFinalScreen()}
       </Fragment>
     );
   }

@@ -23,8 +23,6 @@
   font-family: fantasy;
   font-size: 18px;
   line-height: 36px;
-  padding-left: 24px;
-  padding-right: 24px;
   margin-top: 24px;
   word-spacing: 6px;
 }
@@ -60,17 +58,19 @@
 }
 
 .treasure-hunt-title {
-  color: #484848;
+  color: brown;
   font-family: fantasy;
   font-size: 32px;
   word-spacing: 6px;
 }
 
 .treasure-hunt-description {
-  color: #484848;
+  color: lightgray;
   font-family: fantasy;
   font-size: 24px;
   margin-top: 8px;
+  padding-left: 24px;
+  padding-right: 24px;
   word-spacing: 6px;
 }
 
@@ -89,10 +89,8 @@
 
 .input-code:focus {
   color: #282c34;
-  border: 1px groove lightgray;
   border-radius: 16px;
   letter-spacing: 8px;
-  padding-left: 8px;
 }
 
 .input-code-error:focus {
