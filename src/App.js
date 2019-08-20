@@ -121,12 +121,19 @@ export default class App extends Component {
 
   renderFinalScreen() {
     const description = config.finalDescription.split('\n');
-    console.log('description => ', description);
     return (
       <div className="app-container">
         <div className="home">
           <div className="home-title">{config.finalTitle}</div>
-          <div className="home-description">{description.map(() => <br />)}</div>
+          <div className="home-description">
+            {description[0]}
+            {description.slice(1).map((_, i) => (
+              <Fragment key={i}>
+                <br />
+                {description[i + 1]}
+              </Fragment>
+            ))}
+          </div>
         </div>
       </div>
     );
