@@ -2,6 +2,13 @@ import React, { Component, Fragment } from 'react';
 import './App.css';
 import config from './config';
 
+const colors = [
+  { c: 'brown', bg: '#15f4ee' },
+  { c: 'brown', bg: 'gold' },
+  { c: 'white', bg: 'brown' },
+  { c: 'brown', bg: '#ccff00' }
+];
+
 export default class App extends Component {
   state = {
     started: false,
@@ -140,13 +147,15 @@ export default class App extends Component {
   }
 
   renderCongrats() {
+    const rand = parseInt(colors.length * Math.random());
+    const { c, bg } = colors[rand];
     return (
-      <div className="poster-container">
+      <div className="poster-container" style={{ backgroundColor: bg }}>
         <div className="poster-shine">
           <div className="upper-gradient" />
           <div className="lower-gradient" />
         </div>
-        <div className="poster-title">Congratulations !!!</div>
+        <div className="poster-title" style={{ color: c }}>Congratulations !!!</div>
       </div>
     );
   }

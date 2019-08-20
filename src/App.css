@@ -122,6 +122,10 @@ br {
   width: 200%;
 }
 
+.poster-title {
+  animation: grow 2s;
+}
+
 .poster-shine {
   top: 120%;
   animation: slide 2s linear;
@@ -137,6 +141,11 @@ br {
   height: 50%;
   width: 100%;
   background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0));
+}
+
+@keyframes grow {
+  0%{ font-size: 8px }
+  100%{ font-size: 32px }
 }
 
 @keyframes slide {
