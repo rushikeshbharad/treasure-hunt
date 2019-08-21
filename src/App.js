@@ -141,6 +141,8 @@ export default class App extends Component {
               </Fragment>
             ))}
           </div>
+          <a href="http://www.worldofveg.com/" className="no-button">No</a>
+          <a href="http://www.worldofveg.com/" className="yes-button">Yes</a>
         </div>
       </div>
     );

@@ -143,6 +143,21 @@ br {
   background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0));
 }
 
+.yes-button, .no-button {
+  background-color: brown;
+  border-radius: 8px;
+  color: white;
+  display: inline-block;
+  font-size: 24px;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 24px;
+  margin-top: 16px;
+  text-align: center;
+  text-decoration: none;
+  width: 84px;
+}
+
 @keyframes grow {
   0%{ font-size: 8px }
   100%{ font-size: 32px }
