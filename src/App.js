@@ -49,7 +49,6 @@ export default class App extends Component {
     this.setState({ pageNumber: this.state.pageNumber + 1, congratulations: true });
     setTimeout(() => {
       this.setState({ congratulations: false });
-      this.setState({ showPointer: true });
     }, 1900);
   }
 
