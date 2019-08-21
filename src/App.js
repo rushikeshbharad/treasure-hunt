@@ -17,6 +17,7 @@ export default class App extends Component {
     codeError: false,
     treasureHunted: false,
     congratulations: false,
+    showPointer: true,
   };
 
   beginClick = () => {
@@ -25,10 +26,13 @@ export default class App extends Component {
 
   focused = () => {
     this.setState({ focused: true });
-    const { codeError } = this.state;
+    const { codeError, showPointer } = this.state;
 
     if (codeError) {
       this.setState({ codeError: false });
+    }
+    if (showPointer) {
+      this.setState({ showPointer: false });
     }
   };
 
@@ -45,6 +49,7 @@ export default class App extends Component {
     this.setState({ pageNumber: this.state.pageNumber + 1, congratulations: true });
     setTimeout(() => {
       this.setState({ congratulations: false });
+      this.setState({ showPointer: true });
     }, 1900);
   }
 
@@ -101,7 +106,7 @@ export default class App extends Component {
   }
 
   renderTreasureHunt() {
-    const { pageNumber, focused, codeError } = this.state;
+    const { pageNumber, focused, codeError, showPointer } = this.state;
     if (pageNumber) {
       const { title, description, code } = config.pages[pageNumber - 1];
       return (
@@ -119,6 +124,7 @@ export default class App extends Component {
               onChange={this.handleCode}
             />
           }
+          {showPointer && <div className="code-pointer">👆</div>}
         </div>
       );
     }
