@@ -123,7 +123,7 @@ export default class App extends Component {
               onChange={this.handleCode}
             />
           }
-          {showPointer && <div className="code-pointer">👆</div>}
+          {showPointer && <div className="code-pointer">{' 👆 '}</div>}
         </div>
       );
     }

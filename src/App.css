@@ -139,13 +139,13 @@ br {
 .upper-gradient {
   height: 50%;
   width: 100%;
-  background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0.5));
+  background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0.2));
 }
 
 .lower-gradient {
   height: 50%;
   width: 100%;
-  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0));
+  background-image: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0));
 }
 
 .yes-button, .no-button {
